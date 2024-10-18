@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src = "script.js"></script>
+    <title>Quiz App</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div class="start-screen active">
+            <div class="quiz-header">Quiz</div>
+            <button class="start-btn" onclick="startQuiz()">Start</button>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="question-screen">
+            <div class="question-count">Question <span id="questionNumber">1</span> / 5</div>
+            <div class="question-text" id="questionText">How do you judge what should be added in the next version of the app?</div>
+            <div class="image-container" id="questionImage"></div>
+            <div class="options" id="options">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+            <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-screen">
+            <div class="result">Your result</div>
+            <div class="score">60%</div>
+            <div class="summary">
+                <p><span class="correct">3</span> Correct</p>
+                <p><span class="incorrect">2</span> Incorrect</p>
+            </div>
+            <button class="start-btn" onclick="startQuiz()">Start Again</button>
+        </div>
+    </div>
+</body>
+</html>
